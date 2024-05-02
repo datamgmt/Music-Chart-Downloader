@@ -23,5 +23,8 @@ if not os.path.exists(output_dir):
 
 while fetch_date < today:
    page = f"https://www.officialcharts.com/charts/singles-chart/{fetch_date.strftime('%Y%m%d')}"
+   print (page)
    download_file(page)
    fetch_date = fetch_date + datetime.timedelta(7)
+
+print ("Finished")
