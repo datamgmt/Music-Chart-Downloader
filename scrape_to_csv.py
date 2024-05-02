@@ -42,7 +42,7 @@ with open(all_data_file, 'w', newline='') as all_csvfile:
               chart_position = ""
               chart_artist = ""
               chart_title = ""
-              chart_movement = ""
+              chart_movement = "New"
               chart_peak = ""
               chart_weeks = ""
                 
