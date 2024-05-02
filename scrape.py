@@ -25,7 +25,7 @@ with open("import/items.json", "w") as items_file:
                 position = row.select("span.position")[0].text
                 track_link = row.select("div.track div.title a")[0]
                 artist_link = row.select("div.track div.artist a")[0]
-                label = row.select("div.track div.label-cat span.label")[0].text
+                #label = row.select("div.track div.label-cat span.label")[0].text
 
                 song = track_link.text
                 artist = artist_link.text.title()
@@ -33,20 +33,20 @@ with open("import/items.json", "w") as items_file:
 
                 # response = spotify.get(track_link["href"])
                 # response = ""
-                items = response["tracks"]["items"]
+                # items = response["tracks"]["items"]
 
                 document = {
                     "start": start,
-                    "end": end,
+                    #"end": end,
                     "position": int(position),
                     "track_name": track_link.text.title(),
-                    "track_uri": track_link["href"],
-                    "track_file_name": track_link["href"].strip("/").replace("/", "-"),
+                    #"track_uri": track_link["href"],
+                    #"track_file_name": track_link["href"].strip("/").replace("/", "-"),
                     "artist_name": artist_link.text.title(),
-                    "artist_uri": artist_link["href"],
-                    "label": label.title(),
-                    "duration": items[0]["duration_ms"] if len(items) > 0 else None,
-                    "artists": [{"id": item["id"], "name": item["name"]} for item in items[0]["artists"]] if len(items) > 0 else []
+                    #"artist_uri": artist_link["href"],
+                    #"label": label.title(),
+                    #"duration": items[0]["duration_ms"] if len(items) > 0 else None,
+                    #"artists": [{"id": item["id"], "name": item["name"]} for item in items[0]["artists"]] if len(items) > 0 else []
                 }
                 print(document)
 
