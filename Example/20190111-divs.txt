@@ -1,0 +1,59 @@
+<div class="prose">Official Singles Chart on 11/1/2019</div>
+   
+<div class="primis chart-item relative text-right">
+<div class="chart-item-content relative flex w-full">
+   <div class="position">Number 1
+      <div class="chart-image">
+         <div class="action">
+         </div>
+         <div class="progress-wrapper">
+            <div class="progress">
+               <div class="left-side half-circle">
+               </div>
+               <div class="right-side half-circle">
+               </div>
+            </div>
+            <div class="shadow">
+            </div>
+         </div>
+      </div>
+    </div>
+    <div class="description block">
+       SWEET BUT PSYCHO 
+       AVA MAX
+       <div class="stats">
+          LW: 1
+          Peak: 1
+          Weeks: 12
+       </div>
+    </div>
+</div>
+
+<div class="chart-item relative text-right">
+<div class="chart-item-content relative flex w-full">
+   <div class="position">Number 2
+      <div class="chart-image">
+         <div class="action">
+         </div>
+         <div class="progress-wrapper">
+             <div class="progress">
+                <div class="left-side half-circle">
+                </div>
+             <div class="right-side half-circle">
+             </div>
+         </div>
+      <div class="shadow">
+      </div>
+      </div>
+   </div>
+   </div>
+   <div class="description block">
+      THANK U NEXT
+      ARIANA GRANDE
+      <div class="stats">
+         LW: 2
+         Peak: 1
+         Weeks: 10
+      </div>
+   </div>
+</div>
