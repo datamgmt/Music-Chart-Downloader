@@ -16,7 +16,7 @@ The reference website listed above has two scripts
 download_charts.py works and downloads all the files from 14 November 1952 to 26 April 2024 (3729 weeks in total)
 This means polling the site just once and storing them rather than repeatedly going back and getting blocked
 
-In the early days it was a Top 12, expanding to 20, 30, 50, 75 and currently Top 100 singles
+In the early days of the charts it was a Top 12, expanding to 20, 30, 50, 75 and currently Top 100 singles
 
 For the scrape.py there are several changes
 
@@ -24,7 +24,7 @@ For the scrape.py there are several changes
 * Since the original script there have been format changes on the website and they have removed some of the DIV tags names that made scraping easier
 * As a result of the change in format all the previous projects on the web have been depreciated
 
-Objective is to create a json object or a csv file with the following fields
+The objective is to create a json object or a csv file with the following fields
 
 * chart_date e.g. 11-01-2019
 * chart_position e.g. 1

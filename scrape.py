@@ -10,7 +10,7 @@ with open('import/items.csv', 'w', newline='') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     
-    for path in glob.glob("raw/charts/*"):
+    for path in sorted(glob.glob("raw/charts/*")):
         with open(path, "r") as file:
             print(path)
             
