@@ -1,53 +1,52 @@
 from bs4 import BeautifulSoup
 import glob
-import json
-import urllib.parse
-
+import csv
 import base64
-import requests
-import urllib.parse
 import os
-# from spotify import Spotify
 
-# credentials = f"{os.environ['CLIENT_ID']}:{os.environ['CLIENT_SECRET']}"
-# spotify = Spotify(credentials)
-
-with open("import/items.json", "w") as items_file:
+with open('import/items.csv', 'w', newline='') as csvfile:
+   
+    fieldnames = ['chart_date', 'chart_position', 'chart_artist', 'chart_title', 'chart_movement', 'chart_peak', 'chart_weeks']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    
     for path in glob.glob("raw/charts/*"):
         with open(path, "r") as file:
             print(path)
+            
+            
             soup = BeautifulSoup(file.read(), 'html.parser')
-            start, end = [date.strip() for date in soup.select("p.article-date")[0].text.strip().split(" - ")]
-
-            rows = [row for row in soup.select("table.chart-positions tr") if len(row.select("td")) == 7]
+            
+            chart_date  = soup.select("div.prose span.sr-only")[0].text.split(" on ")[1]
+            
+            rows = [row for row in soup.select("div.chart-item") ]
 
             for row in rows:
-                position = row.select("span.position")[0].text
-                track_link = row.select("div.track div.title a")[0]
-                artist_link = row.select("div.track div.artist a")[0]
-                #label = row.select("div.track div.label-cat span.label")[0].text
+               
+               chart_position = ""
+               chart_artist = ""
+               chart_title = ""
+               chart_movement = ""
+               chart_peak = ""
+               chart_weeks = ""
+                
+               if len(row.select("div.chart-item-content div.position strong") ):
+                  chart_position = row.select("div.chart-item-content div.position strong")[0].text
+               
+               if len(row.select("a.chart-artist span")):
+                  chart_artist = row.select("a.chart-artist span")[0].text
 
-                song = track_link.text
-                artist = artist_link.text.title()
-                clean_artist = " ".join([token for token in artist.replace("/", " ").split() if not token in ["Ft", "&"]])
+               if len(row.select("a.chart-name span")):
+                  chart_title = row.select("a.chart-name span")[1].text
+            
+               if len(row.select("li.movement span")):
+                  chart_movement = row.select("li.movement span")[1].text
 
-                # response = spotify.get(track_link["href"])
-                # response = ""
-                # items = response["tracks"]["items"]
+               if len(row.select("li.peak span")):
+                  chart_peak = row.select("li.peak span")[0].text
 
-                document = {
-                    "start": start,
-                    #"end": end,
-                    "position": int(position),
-                    "track_name": track_link.text.title(),
-                    #"track_uri": track_link["href"],
-                    #"track_file_name": track_link["href"].strip("/").replace("/", "-"),
-                    "artist_name": artist_link.text.title(),
-                    #"artist_uri": artist_link["href"],
-                    #"label": label.title(),
-                    #"duration": items[0]["duration_ms"] if len(items) > 0 else None,
-                    #"artists": [{"id": item["id"], "name": item["name"]} for item in items[0]["artists"]] if len(items) > 0 else []
-                }
-                print(document)
-
-                items_file.write(f"{json.dumps(document)}\n")
+               if len(row.select("li.weeks span")):
+                  chart_weeks = row.select("li.weeks span")[0].text
+                  
+               if len(chart_position):
+                  writer.writerow({'chart_date': chart_date, 'chart_position': chart_position, 'chart_artist': chart_artist, 'chart_title': chart_title, 'chart_movement': chart_movement, 'chart_peak': chart_peak, 'chart_weeks': chart_weeks})
