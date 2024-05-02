@@ -4,16 +4,16 @@ Download UK Chart Data from OfficialCharts.com
 
 Reference Material: https://www.markhneedham.com/blog/2020/01/04/quick-graph-uk-official-charts/
 
-The objective is to download the UK charts from officialcharts.com
+The objective is to download the UK charts from https://www.officialcharts.com
 
 The UK Official Charts does not make it easy to download the raw data
 
 The reference website listed above has two scripts
 
-* download_charts.py that downloads the charts into a directory raw/charts/YYYY-MM_DD
+* download_charts.py that downloads the charts into a directory raw/charts/YYYYMMDD
 * scrape.py that converts the file and extracts the chart positions and enhances it with Spotify data
 
-download_charts.py works and downloads all the files from 14 November 1952 to 26 April 2024 (3728 weeks in total)
+download_charts.py works and downloads all the files from 14 November 1952 to 26 April 2024 (3729 weeks in total)
 This means polling the site just once and storing them rather than repeatedly going back and getting blocked
 
 In the early days it was a Top 12, expanding to 20, 30, 50, 75 and currently Top 100 singles
@@ -22,6 +22,7 @@ For the scrape.py there are several changes
 
 * The Spotify data if not needed as it is being merged into a better Discogs data set
 * Since the original script there have been format changes on the website and they have removed some of the DIV tags names that made scraping easier
+* As a result of the change in format all the previous projects on the web have been depreciated
 
 Objective is to create a json object or a csv file with the following fields
 
