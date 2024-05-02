@@ -53,8 +53,12 @@ with open(all_data_file, 'w', newline='') as all_csvfile:
                  chart_artist = row.select("a.chart-artist span")[0].text
 
               if len(row.select("a.chart-name span")):
-                 chart_title = row.select("a.chart-name span")[1].text
-            
+                 # Specifically to deal with 14 Nv 1952 - first ever chart
+                 if len(row.select("a.chart-name span"))==1:
+                    chart_title = row.select("a.chart-name span")[0].text 
+                 if len(row.select("a.chart-name span"))!=1:
+                    chart_title = row.select("a.chart-name span")[1].text 
+                    
               if len(row.select("li.movement span")):
                  chart_movement = row.select("li.movement span")[1].text
 
