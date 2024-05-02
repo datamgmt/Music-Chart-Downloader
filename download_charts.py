@@ -17,7 +17,7 @@ def download_file(url):
 
 start = datetime.date(1952,11,14)
 
-for week in range(0,3728):
+for week in range(0,3729):
     date = start + datetime.timedelta(week*7)
     print(date)
     page = f"https://www.officialcharts.com/charts/singles-chart/{date.strftime('%Y%m%d')}"
