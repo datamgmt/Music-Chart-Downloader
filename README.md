@@ -2,14 +2,10 @@
 
 Download UK Chart Data from OfficialCharts.com
 
-Reference Material: https://www.markhneedham.com/blog/2020/01/04/quick-graph-uk-official-charts/
-
 The objective is to download the UK charts from https://www.officialcharts.com
 
 The UK Official Charts does not make it easy to download the raw data
-
-The reference website listed above has two scripts
-
+&nbsp;musc
 * download_charts.py that downloads the charts into a directory raw/charts/YYYYMMDD
 * scrape.py that converts the file and extracts the chart positions and enhances it with Spotify data
 
