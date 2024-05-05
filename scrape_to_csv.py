@@ -25,8 +25,8 @@ ALL_DATA_FILE = OUTPUT_DIR + "all_data.csv"
 
 with open(ALL_DATA_FILE, 'w', newline='', encoding="utf-8") as all_csvfile:
 
-    fieldnames = ['chart_date', 'CHART_POSITION', 'CHART_ARTIST',
-                 'CHART_TITLE', 'CHART_MOVEMENT', 'CHART_PEAK', 'CHART_WEEKS']
+    fieldnames = ['chart_date', 'chart_position', 'chart_artist',
+                 'chart_title', 'chart_movement', 'chart_peak', 'chart_weeks']
     all_writer = csv.DictWriter(all_csvfile, fieldnames=fieldnames, lineterminator=os.linesep)
     all_writer.writeheader()
 
@@ -47,7 +47,7 @@ with open(ALL_DATA_FILE, 'w', newline='', encoding="utf-8") as all_csvfile:
                 soup = BeautifulSoup(file.read(), 'html.parser')
 
                 chart_date_data = soup.select("div.prose span.sr-only")[0].text.split(" on ")[1]
-                chart_date = f"{int(chart_date_data.split('/')[2]):04d}-{int(chart_date_data.split('/')[1]):02d}-{int(chart_date_data.split('/')[0]):02d}"
+                CHART_DATE = f"{int(chart_date_data.split('/')[2]):04d}-{int(chart_date_data.split('/')[1]):02d}-{int(chart_date_data.split('/')[0]):02d}"
 
                 #rows = [row for row in soup.select("div.chart-item") ]
                 rows = list(soup.select("div.chart-item"))
@@ -84,19 +84,19 @@ with open(ALL_DATA_FILE, 'w', newline='', encoding="utf-8") as all_csvfile:
                         CHART_WEEKS = row.select("li.weeks span")[0].text
 
                     if len(CHART_POSITION) > 0:
-                        all_writer.writerow({'chart_date': chart_date,
-                                             'CHART_POSITION': CHART_POSITION,
-                                             'CHART_ARTIST': CHART_ARTIST,
-                                             'CHART_TITLE': CHART_TITLE, 
-                                             'CHART_MOVEMENT': CHART_MOVEMENT,
-                                             'CHART_PEAK': CHART_PEAK, 
-                                             'CHART_WEEKS': CHART_WEEKS})
-                        this_writer.writerow({'chart_date': chart_date,
-                                              'CHART_POSITION': CHART_POSITION,
-                                              'CHART_ARTIST': CHART_ARTIST, 
-                                              'CHART_TITLE': CHART_TITLE, 
-                                              'CHART_MOVEMENT': CHART_MOVEMENT, 
-                                              'CHART_PEAK': CHART_PEAK, 
-                                              'CHART_WEEKS': CHART_WEEKS})
+                        all_writer.writerow({'chart_date': CHART_DATE,
+                                             'chart_position': CHART_POSITION,
+                                             'chart_artist': CHART_ARTIST,
+                                             'chart_title': CHART_TITLE, 
+                                             'chart_movement': CHART_MOVEMENT,
+                                             'chart_peak': CHART_PEAK, 
+                                             'chart_weeks': CHART_WEEKS})
+                        this_writer.writerow({'chart_date': CHART_DATE,
+                                              'chart_position': CHART_POSITION,
+                                              'chart_artist': CHART_ARTIST, 
+                                              'chart_title': CHART_TITLE, 
+                                              'chart_movement': CHART_MOVEMENT, 
+                                              'chart_peak': CHART_PEAK, 
+                                              'chart_weeks': CHART_WEEKS})
 
 print ("Finished")
