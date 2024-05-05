@@ -10,19 +10,19 @@ In the early days of the charts it was a Top 12, expanding to 20, 30, 50, 75 and
 
 There are two scripts in this folder
 
-= download_charts.py =
+## download_charts.py
 
 * download_charts.py downloads the charts into a directory data/html/YYYYMMDD.html
 * It downloads all the files from 14 November 1952 to the latest chart
 * If a chart already exists it skips that week and moves on to the next week - this means that used repeatedly it will minimise the fetches to the missing charts only
 * There are 3730 charts to May 2024
 
-= scrape_to_csv.py =
+## scrape_to_csv.py
 
 * scrape_to_csv.py that converts all the files in data/html and writes a file per day in data/html/YYYYMMDD.csv 
 * It also creates a file with the data from all the .html files in data/csv/all_data.csv
 
-= Output format =
+## Output format
 
 * chart_date e.g. 2024-02-26
 * chart_position e.g. 1
