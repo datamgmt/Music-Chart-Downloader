@@ -34,6 +34,13 @@ There are two scripts in this folder
 * chart_peak e.g. 1
 * chart_weeks e.g. 12
 
+## Running the scripts
+
+```
+python3 download_charts.py
+python3 scrape_to_csv.py
+```
+
 ## Build environment & maintenance
 
 * This utility was written on an Apple M1 Ultra based Mac running Sonoma 14.4.1 and Python version 3.9.6..
