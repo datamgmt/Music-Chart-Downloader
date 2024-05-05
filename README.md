@@ -32,7 +32,8 @@ There are two scripts in this folder
 * chart_peak e.g. 1
 * chart_weeks e.g. 12
 
+## Build environment & maintenance
 
-This utility was written on an Apple M1 Ultra based Mac running Sonoma 14.4.1 and Python version 3.9.6 
-Written and tested on 5 May 2024 - note that data formats of the source may vary over time
-This code is unmaintained
+* This utility was written on an Apple M1 Ultra based Mac running Sonoma 14.4.1 and Python version 3.9.6..
+* Written and tested on 5 May 2024 - note that data formats of the source may vary over time.
+* This code is unmaintained.
