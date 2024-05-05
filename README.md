@@ -1,6 +1,8 @@
 # uk-chart-data
 
-Download UK Chart Data from OfficialCharts.com
+Download & scrape UK Chart Data from OfficialCharts.com
+
+## Overview
 
 The objective is to download the UK charts from https://www.officialcharts.com
 
