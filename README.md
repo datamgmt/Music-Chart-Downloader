@@ -144,4 +144,4 @@ Potential enhancements for an indeterminate future update
 * https://www.markhneedham.com/blog/2020/01/04/quick-graph-uk-official-charts/
 
 ## Acknowldgements
-* @github/Prokopp for unwittingly being a sounding board 
+* https://github.com/Prokopp for unwittingly being a sounding board 
