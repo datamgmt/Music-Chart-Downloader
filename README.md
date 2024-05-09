@@ -101,6 +101,26 @@ chart_date,chart_position,chart_artist,chart_title,chart_movement,chart_peak,cha
 ## JSON Format example
 
 ```
+[
+    {
+        "chart_date": "20221230",
+        "chart_movement": "3",
+        "chart_position": "1",
+        "chart_artist": "MICHAEL BUBLE",
+        "chart_title": "CHRISTMAS",
+        "chart_peak": "1",
+        "chart_weeks": "105"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "1",
+        "chart_position": "2",
+        "chart_artist": "TAYLOR SWIFT",
+        "chart_title": "MIDNIGHTS",
+        "chart_peak": "1",
+        "chart_weeks": "10"
+    }
+]
 ```
 
 
