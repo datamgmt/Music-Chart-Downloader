@@ -70,6 +70,22 @@ optional arguments:
 * chart_peak e.g. 1
 * chart_weeks e.g. 12
 
+## Directory Structure
+
+```
+.
+├── README.md  # This file
+├── data # Data Firectories
+│   ├── csv # CSV Output files
+│   ├── html # Downloaded HTML Files
+│   └── json # JSON Output files
+├── mcdc.py # The script
+└── samples # sample html files to understand the structure 
+    ├── uk-singles-chart.html
+    └── uk-singles-chart.png
+
+```
+
 ## CSV Format example
 
 ```
