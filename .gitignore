@@ -1,9 +1,9 @@
 .DS_Store
 data/.DS_Store
 data/csv/.DS_Store
-data/csv/*
+data/csv/*.csv
 data/html/.DS_Store
-data/html/*
+data/html/*.html
 data/json/.DS_Store
-data/json/*
+data/json/*.json
 samples/.DS_Store
