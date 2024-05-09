@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Music Chart Download Collector (mcdc.py) by David M Walker
+Music Chart Downloader (mcd.py) by David M Walker
 (c) 2024 Data Management & Warehousing
 
 A utility to download music charts from various sources and convert them
