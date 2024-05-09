@@ -1,30 +1,67 @@
-# uk-chart-data
+# Music Chart Downloader
 
-Download & scrape UK Chart Data from OfficialCharts.com
+Music Chart Downloader (mcd.py) by David M Walker
+(c) 2024 Data Management & Warehousing
+
+Extract chart data from chart websites and store in files
+
+Currently supports OfficialCharts.com Singles & Albums charts
 
 ## Overview
 
-The objective is to download the UK Official Singles Charts  from https://www.officialcharts.com
+This utility downloads the charts in html format from OfficialCharts.com (https://www.officialcharts.com)
+The script can download the UK Singles Chart or the UK Album Chart.
 
-The UK Official Charts does not make it easy to download the raw data, there is no API so scraping every page is the only way
+The download can be for a single week, a range of weeks or all historical charts.
 
-In the early days of the charts it was a Top 12, expanding to 20, 30, 50, 75 and currently Top 100 singles over time
+It then writes out the data as either a json file or a csv file for use elsewhere.
 
-There are two scripts in this folder
+## Process
 
-## download_charts.py
+* Download all the html files for the data range requested from the chart website
+* html files that have already been downloaded will not be re-downloaded
+* Parse the files for the chart entries
+* Write the files out in either a json or csv file 
+* Charts can be written out as one file per week or one file for all data
 
-* download_charts.py downloads each weeks chart into a directory data/html/YYYYMMDD.html
-* It downloads all the files from 14 November 1952 to the latest chart
-* If a chart already exists in data/html it skips that week and moves on to the next week - this means that used repeatedly it will minimise the fetches and get the missing charts only
-* There are ~3730 charts to May 2024
+## Running the script
 
-## scrape_to_csv.py
+Download all UK Singles charts and create a single CSV file with all the data
+```
+./mcd.py
+```
 
-* scrape_to_csv.py that converts all the files in data/html and writes a file per day in data/html/YYYYMMDD.csv 
-* It also creates a file with the data from all the .html files in data/csv/all_data.csv
+Download the 2023 UK Album charts and write one JSON file per week
 
-## Output format
+```
+./mcd.py --chart uk-albums --startdate 20230101 --enddate 20231231 --output_type json --output_set weekly
+```
+
+Help and options
+
+```
+usage: mcdc.py [-h] [--chart {uk-singles,uk-albums}] [--startdate STARTDATE] [--enddate ENDDATE] [--datadir DATADIR]
+               [--output_type [{csv,json} ...]] [--output_set [{weekly,all} ...]]
+
+The Music Chart Data Collector
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --chart {uk-singles,uk-albums}
+                        Which music chart to download, (Default: uk-singles)
+  --startdate STARTDATE
+                        The first chart to download in YYYYMMDD format (Default: 19521114)
+  --enddate ENDDATE     The last chart to download in YYYYMMDD format (Default: 20240509)
+  --datadir DATADIR     Location of datafiles used in processing (Default: ./data)
+  --output_type [{csv,json} ...]
+                        Output file formats required (Default: ['csv'])
+  --output_set [{weekly,all} ...]
+                        Weekly charts and/or one large file (Default: ['all'])
+
+(c)2024 Data Management & Warehousing
+```
+
+## Available data field
 
 * chart_date e.g. 2024-04-26
 * chart_position e.g. 1
@@ -34,15 +71,18 @@ There are two scripts in this folder
 * chart_peak e.g. 1
 * chart_weeks e.g. 12
 
-## Running the scripts
+## CSV Format example
 
 ```
-python3 download_charts.py
-python3 scrape_to_csv.py
+```
+
+## JSON Format example
+
+```
 ```
 
 ## Build environment & maintenance
 
 * This utility was written on an Apple M1 Ultra based Mac running Sonoma 14.4.1 and Python version 3.9.6..
-* Written and tested on 5 May 2024 - note that data formats of the source may vary over time.
+* Written and tested in May 2024 - note that data formats of the source may vary over time. causing the programme to fail.
 * This code is unmaintained.
