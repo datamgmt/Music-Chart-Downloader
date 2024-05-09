@@ -1,4 +1,9 @@
 .DS_Store
 data/.DS_Store
 data/csv/.DS_Store
+data/csv/*
 data/html/.DS_Store
+data/html/*
+data/json/.DS_Store
+data/json/*
+samples/.DS_Store
