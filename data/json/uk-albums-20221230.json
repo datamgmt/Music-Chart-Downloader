@@ -1,0 +1,903 @@
+[
+    {
+        "chart_date": "20221230",
+        "chart_movement": "3",
+        "chart_position": "1",
+        "chart_artist": "MICHAEL BUBLE",
+        "chart_title": "CHRISTMAS",
+        "chart_peak": "1",
+        "chart_weeks": "105"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "1",
+        "chart_position": "2",
+        "chart_artist": "TAYLOR SWIFT",
+        "chart_title": "MIDNIGHTS",
+        "chart_peak": "1",
+        "chart_weeks": "10"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "4",
+        "chart_position": "3",
+        "chart_artist": "SZA",
+        "chart_title": "SOS",
+        "chart_peak": "2",
+        "chart_weeks": "3"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "11",
+        "chart_position": "4",
+        "chart_artist": "ED SHEERAN",
+        "chart_title": "=",
+        "chart_peak": "1",
+        "chart_weeks": "61"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "14",
+        "chart_position": "5",
+        "chart_artist": "ELTON JOHN",
+        "chart_title": "DIAMONDS",
+        "chart_peak": "5",
+        "chart_weeks": "268"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "8",
+        "chart_position": "6",
+        "chart_artist": "HARRY STYLES",
+        "chart_title": "HARRY'S HOUSE",
+        "chart_peak": "1",
+        "chart_weeks": "32"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "12",
+        "chart_position": "7",
+        "chart_artist": "WEEKND",
+        "chart_title": "THE HIGHLIGHTS",
+        "chart_peak": "2",
+        "chart_weeks": "99"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "13",
+        "chart_position": "8",
+        "chart_artist": "FLEETWOOD MAC",
+        "chart_title": "RUMOURS",
+        "chart_peak": "1",
+        "chart_weeks": "973"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "15",
+        "chart_position": "9",
+        "chart_artist": "ARCTIC MONKEYS",
+        "chart_title": "AM",
+        "chart_peak": "1",
+        "chart_weeks": "485"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "6",
+        "chart_position": "10",
+        "chart_artist": "SAM RYDER",
+        "chart_title": "THERE'S NOTHING BUT SPACE MAN",
+        "chart_peak": "1",
+        "chart_weeks": "3"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "18",
+        "chart_position": "11",
+        "chart_artist": "EMINEM",
+        "chart_title": "CURTAIN CALL - THE HITS",
+        "chart_peak": "1",
+        "chart_weeks": "546"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "2",
+        "chart_position": "12",
+        "chart_artist": "CLIFF RICHARD",
+        "chart_title": "CHRISTMAS WITH CLIFF",
+        "chart_peak": "2",
+        "chart_weeks": "5"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "20",
+        "chart_position": "13",
+        "chart_artist": "ABBA",
+        "chart_title": "GOLD - GREATEST HITS",
+        "chart_peak": "1",
+        "chart_weeks": "1078"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "9",
+        "chart_position": "14",
+        "chart_artist": "GEORGE EZRA",
+        "chart_title": "GOLD RUSH KID",
+        "chart_peak": "1",
+        "chart_weeks": "29"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "25",
+        "chart_position": "15",
+        "chart_artist": "FLEETWOOD MAC",
+        "chart_title": "50 YEARS - DON'T STOP",
+        "chart_peak": "5",
+        "chart_weeks": "215"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "23",
+        "chart_position": "16",
+        "chart_artist": "QUEEN",
+        "chart_title": "GREATEST HITS",
+        "chart_peak": "1",
+        "chart_weeks": "1030"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "17",
+        "chart_position": "17",
+        "chart_artist": "METRO BOOMIN",
+        "chart_title": "HEROES & VILLAINS",
+        "chart_peak": "3",
+        "chart_weeks": "4"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "19",
+        "chart_position": "18",
+        "chart_artist": "SAM FENDER",
+        "chart_title": "SEVENTEEN GOING UNDER",
+        "chart_peak": "1",
+        "chart_weeks": "64"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "24",
+        "chart_position": "19",
+        "chart_artist": "LEWIS CAPALDI",
+        "chart_title": "DIVINELY UNINSPIRED TO A HELLISH EXTENT",
+        "chart_peak": "1",
+        "chart_weeks": "189"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "5",
+        "chart_position": "20",
+        "chart_artist": "ANDREA/MATTEO/VIRGINIA BOCELLI",
+        "chart_title": "A FAMILY CHRISTMAS",
+        "chart_peak": "4",
+        "chart_weeks": "10"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "27",
+        "chart_position": "21",
+        "chart_artist": "1975",
+        "chart_title": "BEING FUNNY IN A FOREIGN LANGUAGE",
+        "chart_peak": "1",
+        "chart_weeks": "11"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "30",
+        "chart_position": "22",
+        "chart_artist": "LUKE EVANS",
+        "chart_title": "A SONG FOR YOU",
+        "chart_peak": "4",
+        "chart_weeks": "8"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "38",
+        "chart_position": "23",
+        "chart_artist": "OASIS",
+        "chart_title": "TIME FLIES - 1994-2009",
+        "chart_peak": "1",
+        "chart_weeks": "486"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "10",
+        "chart_position": "24",
+        "chart_artist": "BRUCE SPRINGSTEEN",
+        "chart_title": "ONLY THE STRONG SURVIVE",
+        "chart_peak": "2",
+        "chart_weeks": "7"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "28",
+        "chart_position": "25",
+        "chart_artist": "DRAKE & 21 SAVAGE",
+        "chart_title": "HER LOSS",
+        "chart_peak": "1",
+        "chart_weeks": "8"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "34",
+        "chart_position": "26",
+        "chart_artist": "OLIVIA RODRIGO",
+        "chart_title": "SOUR",
+        "chart_peak": "1",
+        "chart_weeks": "84"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "91",
+        "chart_position": "27",
+        "chart_artist": "BING CROSBY",
+        "chart_title": "CHRISTMAS CLASSICS",
+        "chart_peak": "27",
+        "chart_weeks": "8"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "35",
+        "chart_position": "28",
+        "chart_artist": "ED SHEERAN",
+        "chart_title": "DIVIDE",
+        "chart_peak": "1",
+        "chart_weeks": "304"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "31",
+        "chart_position": "29",
+        "chart_artist": "OASIS",
+        "chart_title": "WHAT'S THE STORY MORNING GLORY",
+        "chart_peak": "1",
+        "chart_weeks": "573"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "21",
+        "chart_position": "30",
+        "chart_artist": "STORMZY",
+        "chart_title": "THIS IS WHAT I MEAN",
+        "chart_peak": "1",
+        "chart_weeks": "5"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "60",
+        "chart_position": "31",
+        "chart_artist": "ELVIS PRESLEY",
+        "chart_title": "ELV1S - 30 NUMBER 1 HITS",
+        "chart_peak": "1",
+        "chart_weeks": "168"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "39",
+        "chart_position": "32",
+        "chart_artist": "HARRY STYLES",
+        "chart_title": "FINE LINE",
+        "chart_peak": "2",
+        "chart_weeks": "159"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "22",
+        "chart_position": "33",
+        "chart_artist": "ARCTIC MONKEYS",
+        "chart_title": "THE CAR",
+        "chart_peak": "2",
+        "chart_weeks": "10"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "33",
+        "chart_position": "34",
+        "chart_artist": "ARCTIC MONKEYS",
+        "chart_title": "WHATEVER PEOPLE SAY I AM THAT'S WHAT I'M",
+        "chart_peak": "1",
+        "chart_weeks": "424"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "48",
+        "chart_position": "35",
+        "chart_artist": "LITTLE MIX",
+        "chart_title": "BETWEEN US",
+        "chart_peak": "3",
+        "chart_weeks": "59"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "7",
+        "chart_position": "36",
+        "chart_artist": "ANDRE RIEU & JOHANN STRAUSS OR",
+        "chart_title": "SILVER BELLS",
+        "chart_peak": "4",
+        "chart_weeks": "6"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "32",
+        "chart_position": "37",
+        "chart_artist": "TAYLOR SWIFT",
+        "chart_title": "FOLKLORE",
+        "chart_peak": "1",
+        "chart_weeks": "127"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "50",
+        "chart_position": "38",
+        "chart_artist": "TAYLOR SWIFT",
+        "chart_title": "1989",
+        "chart_peak": "1",
+        "chart_weeks": "283"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "46",
+        "chart_position": "39",
+        "chart_artist": "EMINEM",
+        "chart_title": "CURTAIN CALL 2",
+        "chart_peak": "3",
+        "chart_weeks": "21"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "74",
+        "chart_position": "40",
+        "chart_artist": "GEORGE MICHAEL",
+        "chart_title": "TWENTY FIVE",
+        "chart_peak": "1",
+        "chart_weeks": "297"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "42",
+        "chart_position": "41",
+        "chart_artist": "LANA DEL REY",
+        "chart_title": "BORN TO DIE",
+        "chart_peak": "1",
+        "chart_weeks": "178"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "49",
+        "chart_position": "42",
+        "chart_artist": "WEEKND",
+        "chart_title": "STARBOY",
+        "chart_peak": "5",
+        "chart_weeks": "98"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "53",
+        "chart_position": "43",
+        "chart_artist": "BOB MARLEY & THE WAILERS",
+        "chart_title": "LEGEND",
+        "chart_peak": "1",
+        "chart_weeks": "1062"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "16",
+        "chart_position": "44",
+        "chart_artist": "MICHAEL BALL & ALFIE BOE",
+        "chart_title": "TOGETHER IN VEGAS",
+        "chart_peak": "3",
+        "chart_weeks": "9"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "36",
+        "chart_position": "45",
+        "chart_artist": "FOO FIGHTERS",
+        "chart_title": "THE ESSENTIAL",
+        "chart_peak": "10",
+        "chart_weeks": "9"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "64",
+        "chart_position": "46",
+        "chart_artist": "MICHAEL JACKSON",
+        "chart_title": "NUMBER ONES",
+        "chart_peak": "1",
+        "chart_weeks": "580"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "59",
+        "chart_position": "47",
+        "chart_artist": "DAVID BOWIE",
+        "chart_title": "LEGACY",
+        "chart_peak": "5",
+        "chart_weeks": "319"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "95",
+        "chart_position": "48",
+        "chart_artist": "MARIAH CAREY",
+        "chart_title": "MERRY CHRISTMAS",
+        "chart_peak": "32",
+        "chart_weeks": "19"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "41",
+        "chart_position": "49",
+        "chart_artist": "PINK FLOYD",
+        "chart_title": "THE DARK SIDE OF THE MOON",
+        "chart_peak": "2",
+        "chart_weeks": "548"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "45",
+        "chart_position": "50",
+        "chart_artist": "AMY WINEHOUSE",
+        "chart_title": "BACK TO BLACK",
+        "chart_peak": "1",
+        "chart_weeks": "475"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "26",
+        "chart_position": "51",
+        "chart_artist": "OLLY MURS",
+        "chart_title": "MARRY ME",
+        "chart_peak": "1",
+        "chart_weeks": "4"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "83",
+        "chart_position": "52",
+        "chart_artist": "NAT KING COLE",
+        "chart_title": "THE CHRISTMAS SONG",
+        "chart_peak": "49",
+        "chart_weeks": "5"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "40",
+        "chart_position": "53",
+        "chart_artist": "NIRVANA",
+        "chart_title": "NEVERMIND",
+        "chart_peak": "5",
+        "chart_weeks": "422"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "71",
+        "chart_position": "54",
+        "chart_artist": "WHITNEY HOUSTON",
+        "chart_title": "I WILL ALWAYS LOVE YOU - THE BEST OF",
+        "chart_peak": "27",
+        "chart_weeks": "80"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "56",
+        "chart_position": "55",
+        "chart_artist": "D-BLOCK EUROPE",
+        "chart_title": "LAP 5",
+        "chart_peak": "2",
+        "chart_weeks": "14"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "54",
+        "chart_position": "56",
+        "chart_artist": "TAYLOR SWIFT",
+        "chart_title": "LOVER",
+        "chart_peak": "1",
+        "chart_weeks": "158"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "44",
+        "chart_position": "57",
+        "chart_artist": "DERMOT KENNEDY",
+        "chart_title": "SONDER",
+        "chart_peak": "1",
+        "chart_weeks": "6"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "New",
+        "chart_position": "58",
+        "chart_artist": "NAT KING COLE",
+        "chart_title": "CHRISTMAS WITH NAT KING COLE",
+        "chart_peak": "58",
+        "chart_weeks": "1"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "78",
+        "chart_position": "59",
+        "chart_artist": "BEATLES",
+        "chart_title": "1",
+        "chart_peak": "1",
+        "chart_weeks": "399"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "73",
+        "chart_position": "60",
+        "chart_artist": "TAYLOR SWIFT",
+        "chart_title": "REPUTATION",
+        "chart_peak": "1",
+        "chart_weeks": "93"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "70",
+        "chart_position": "61",
+        "chart_artist": "WEEKND",
+        "chart_title": "AFTER HOURS",
+        "chart_peak": "1",
+        "chart_weeks": "82"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "RE",
+        "chart_position": "62",
+        "chart_artist": "KING'S COLLEGE CHOIR",
+        "chart_title": "CHRISTMAS AT KING'S",
+        "chart_peak": "62",
+        "chart_weeks": "7"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "47",
+        "chart_position": "63",
+        "chart_artist": "ADELE",
+        "chart_title": "30",
+        "chart_peak": "1",
+        "chart_weeks": "56"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "58",
+        "chart_position": "64",
+        "chart_artist": "OASIS",
+        "chart_title": "DEFINITELY MAYBE",
+        "chart_peak": "1",
+        "chart_weeks": "469"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "RE",
+        "chart_position": "65",
+        "chart_artist": "LOUIS TOMLINSON",
+        "chart_title": "FAITH IN THE FUTURE",
+        "chart_peak": "1",
+        "chart_weeks": "5"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "65",
+        "chart_position": "66",
+        "chart_artist": "BECKY HILL",
+        "chart_title": "ONLY HONEST ON THE WEEKEND",
+        "chart_peak": "7",
+        "chart_weeks": "53"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "RE",
+        "chart_position": "67",
+        "chart_artist": "KING'S COLLEGE CHOIR/WILLCOCKS",
+        "chart_title": "CAROLS FROM KING'S COLLEGE CAMBRIDGE",
+        "chart_peak": "67",
+        "chart_weeks": "2"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "66",
+        "chart_position": "68",
+        "chart_artist": "TAYLOR SWIFT",
+        "chart_title": "EVERMORE",
+        "chart_peak": "1",
+        "chart_weeks": "90"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "75",
+        "chart_position": "69",
+        "chart_artist": "ELLA HENDERSON",
+        "chart_title": "EVERYTHING I DIDN'T SAY",
+        "chart_peak": "8",
+        "chart_weeks": "7"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "76",
+        "chart_position": "70",
+        "chart_artist": "XXXTENTACION",
+        "chart_title": "LOOK AT ME - THE ALBUM",
+        "chart_peak": "23",
+        "chart_weeks": "29"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "37",
+        "chart_position": "71",
+        "chart_artist": "WET LEG",
+        "chart_title": "WET LEG",
+        "chart_peak": "1",
+        "chart_weeks": "25"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "62",
+        "chart_position": "72",
+        "chart_artist": "ARCTIC MONKEYS",
+        "chart_title": "FAVOURITE WORST NIGHTMARE",
+        "chart_peak": "1",
+        "chart_weeks": "94"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "69",
+        "chart_position": "73",
+        "chart_artist": "WEEKND",
+        "chart_title": "DAWN FM",
+        "chart_peak": "1",
+        "chart_weeks": "39"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "61",
+        "chart_position": "74",
+        "chart_artist": "KENDRICK LAMAR",
+        "chart_title": "MR. MORALE & THE BIG STEPPERS",
+        "chart_peak": "2",
+        "chart_weeks": "33"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "81",
+        "chart_position": "75",
+        "chart_artist": "MAROON 5",
+        "chart_title": "SINGLES",
+        "chart_peak": "32",
+        "chart_weeks": "274"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "55",
+        "chart_position": "76",
+        "chart_artist": "DOLLY PARTON",
+        "chart_title": "DIAMONDS & RHINESTONES - GREATEST HITS",
+        "chart_peak": "32",
+        "chart_weeks": "6"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "43",
+        "chart_position": "77",
+        "chart_artist": "BEATLES",
+        "chart_title": "REVOLVER",
+        "chart_peak": "2",
+        "chart_weeks": "33"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "57",
+        "chart_position": "78",
+        "chart_artist": "SPECIALS",
+        "chart_title": "THE SPECIALS",
+        "chart_peak": "22",
+        "chart_weeks": "5"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "51",
+        "chart_position": "79",
+        "chart_artist": "PAOLO NUTINI",
+        "chart_title": "LAST NIGHT IN THE BITTERSWEET",
+        "chart_peak": "1",
+        "chart_weeks": "15"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "94",
+        "chart_position": "80",
+        "chart_artist": "BILLY JOEL",
+        "chart_title": "PIANO MAN - THE VERY BEST OF",
+        "chart_peak": "7",
+        "chart_weeks": "181"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "68",
+        "chart_position": "81",
+        "chart_artist": "BEYONCE",
+        "chart_title": "RENAISSANCE",
+        "chart_peak": "1",
+        "chart_weeks": "22"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "72",
+        "chart_position": "82",
+        "chart_artist": "BILLIE EILISH",
+        "chart_title": "HAPPIER THAN EVER",
+        "chart_peak": "1",
+        "chart_weeks": "74"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "87",
+        "chart_position": "83",
+        "chart_artist": "SMITHS",
+        "chart_title": "HATFUL OF HOLLOW",
+        "chart_peak": "26",
+        "chart_weeks": "6"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "89",
+        "chart_position": "84",
+        "chart_artist": "HARRY STYLES",
+        "chart_title": "HARRY STYLES",
+        "chart_peak": "1",
+        "chart_weeks": "131"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "82",
+        "chart_position": "85",
+        "chart_artist": "EMINEM",
+        "chart_title": "THE EMINEM SHOW",
+        "chart_peak": "1",
+        "chart_weeks": "98"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "77",
+        "chart_position": "86",
+        "chart_artist": "BILLIE EILISH",
+        "chart_title": "WHEN WE ALL FALL ASLEEP WHERE DO WE GO",
+        "chart_peak": "1",
+        "chart_weeks": "196"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "79",
+        "chart_position": "87",
+        "chart_artist": "TAYLOR SWIFT",
+        "chart_title": "RED (TAYLOR'S VERSION)",
+        "chart_peak": "1",
+        "chart_weeks": "51"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "85",
+        "chart_position": "88",
+        "chart_artist": "DUA LIPA",
+        "chart_title": "FUTURE NOSTALGIA",
+        "chart_peak": "1",
+        "chart_weeks": "144"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "RE",
+        "chart_position": "89",
+        "chart_artist": "BILLIE EILISH",
+        "chart_title": "DON'T SMILE AT ME",
+        "chart_peak": "12",
+        "chart_weeks": "206"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "RE",
+        "chart_position": "90",
+        "chart_artist": "KING'S COLLEGE CHOIR",
+        "chart_title": "BEST LOVED CHRISTMAS CAROLS",
+        "chart_peak": "90",
+        "chart_weeks": "3"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "80",
+        "chart_position": "91",
+        "chart_artist": "DAVE",
+        "chart_title": "WE'RE ALL ALONE IN THIS TOGETHER",
+        "chart_peak": "1",
+        "chart_weeks": "75"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "92",
+        "chart_position": "92",
+        "chart_artist": "SAM SMITH",
+        "chart_title": "IN THE LONELY HOUR",
+        "chart_peak": "1",
+        "chart_weeks": "420"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "96",
+        "chart_position": "93",
+        "chart_artist": "ADELE",
+        "chart_title": "21",
+        "chart_peak": "1",
+        "chart_weeks": "347"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "New",
+        "chart_position": "94",
+        "chart_artist": "KELLY CLARKSON",
+        "chart_title": "WHEN CHRISTMAS COMES AROUND",
+        "chart_peak": "94",
+        "chart_weeks": "1"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "100",
+        "chart_position": "95",
+        "chart_artist": "LADY GAGA",
+        "chart_title": "THE FAME",
+        "chart_peak": "1",
+        "chart_weeks": "225"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "97",
+        "chart_position": "96",
+        "chart_artist": "ADELE",
+        "chart_title": "25",
+        "chart_peak": "1",
+        "chart_weeks": "272"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "93",
+        "chart_position": "97",
+        "chart_artist": "50 CENT",
+        "chart_title": "BEST OF",
+        "chart_peak": "41",
+        "chart_weeks": "81"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "RE",
+        "chart_position": "98",
+        "chart_artist": "BRUNO MARS",
+        "chart_title": "DOO-WOPS & HOOLIGANS",
+        "chart_peak": "1",
+        "chart_weeks": "271"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "63",
+        "chart_position": "99",
+        "chart_artist": "A BOOGIE WIT DA HOODIE",
+        "chart_title": "ME VS MYSELF",
+        "chart_peak": "22",
+        "chart_weeks": "3"
+    },
+    {
+        "chart_date": "20221230",
+        "chart_movement": "New",
+        "chart_position": "100",
+        "chart_artist": "JOHN WILLIAMS",
+        "chart_title": "HOME ALONE - OST",
+        "chart_peak": "100",
+        "chart_weeks": "1"
+    }
+]
+:

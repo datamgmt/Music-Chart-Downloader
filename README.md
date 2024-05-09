@@ -60,16 +60,6 @@ optional arguments:
 (c)2024 Data Management & Warehousing
 ```
 
-## Available data field
-
-* chart_date e.g. 2024-04-26
-* chart_position e.g. 1
-* chart_artist e.g. AVA MAX
-* chart_title e.g. SWEET BUT PSYCHO
-* chart_movement e.g. 1
-* chart_peak e.g. 1
-* chart_weeks e.g. 12
-
 ## Directory Structure
 
 ```
@@ -85,6 +75,16 @@ optional arguments:
     └── uk-singles-chart.png
 
 ```
+
+## Available data field
+
+* chart_date e.g. 2024-04-26
+* chart_position e.g. 1
+* chart_artist e.g. AVA MAX
+* chart_title e.g. SWEET BUT PSYCHO
+* chart_movement e.g. 1
+* chart_peak e.g. 1
+* chart_weeks e.g. 12
 
 ## CSV Format example
 
@@ -102,6 +102,12 @@ chart_date,chart_position,chart_artist,chart_title,chart_movement,chart_peak,cha
 
 ```
 ```
+
+
+## To Do List
+
+* Add US Billboard Charts (e.g. URL https://www.billboard.com/charts/hot-100/2024-04-13/)
+* XML Support
 
 ## Build environment & maintenance
 
