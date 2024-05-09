@@ -1,6 +1,7 @@
 # Music Chart Downloader
 
 Music Chart Downloader (mcd.py) by David M Walker
+
 (c) 2024 Data Management & Warehousing
 
 Extract chart data from chart websites and store in files
@@ -9,12 +10,10 @@ Currently supports OfficialCharts.com Singles & Albums charts
 
 ## Overview
 
-This utility downloads the charts in html format from OfficialCharts.com (https://www.officialcharts.com)
-The script can download the UK Singles Chart or the UK Album Chart.
-
-The download can be for a single week, a range of weeks or all historical charts.
-
-It then writes out the data as either a json file or a csv file for use elsewhere.
+* This utility downloads the charts in html format from OfficialCharts.com (https://www.officialcharts.com)
+* The script can download the UK Singles Chart or the UK Album Chart.
+* The download can be for a single week, a range of weeks or all historical charts.
+* It then writes out the data as either a json file or a csv file for use elsewhere.
 
 ## Process
 
