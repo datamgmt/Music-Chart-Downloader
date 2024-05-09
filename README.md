@@ -85,3 +85,8 @@ optional arguments:
 * This utility was written on an Apple M1 Ultra based Mac running Sonoma 14.4.1 and Python version 3.9.6..
 * Written and tested in May 2024 - note that data formats of the source may vary over time. causing the programme to fail.
 * This code is unmaintained.
+
+## Other code that has similar functionality
+* https://pypi.org/project/uk-charts-api
+* https://medium.com/@caineosborne/analysing-uk-chart-history-1956-to-2017-6fec0ecc991b
+* https://www.markhneedham.com/blog/2020/01/04/quick-graph-uk-official-charts/
