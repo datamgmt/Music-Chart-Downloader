@@ -74,13 +74,13 @@ optional arguments:
 
 ```
 .
-├── README.md  # This file
-├── data # Data Firectories
-│   ├── csv # CSV Output files
-│   ├── html # Downloaded HTML Files
-│   └── json # JSON Output files
-├── mcdc.py # The script
-└── samples # sample html files to understand the structure 
+├── README.md                   # This file
+├── data                        # Data Firectories
+│   ├── csv                     # CSV Output files
+│   ├── html                    # Downloaded HTML Files
+│   └── json                    # JSON Output files
+├── mcdc.py                     # The script
+└── samples                     # sample html files to understand the structure 
     ├── uk-singles-chart.html
     └── uk-singles-chart.png
 
@@ -89,6 +89,13 @@ optional arguments:
 ## CSV Format example
 
 ```
+chart_date,chart_position,chart_artist,chart_title,chart_movement,chart_peak,chart_weeks
+19521114,1,AL MARTINO,HERE IN MY HEART,New,1,1
+19521114,2,JO STAFFORD,YOU BELONG TO ME,New,2,1
+19521114,3,NAT 'KING' COLE,SOMEWHERE ALONG THE WAY,New,3,1
+19521114,4,BING CROSBY,THE ISLE OF INNISFREE,New,4,1
+19521114,5,GUY MITCHELL,FEET UP (PAT HIM ON THE PO-PO),New,5,1
+19521114,6,ROSEMARY CLOONEY,HALF AS MUCH,New,6,1
 ```
 
 ## JSON Format example
