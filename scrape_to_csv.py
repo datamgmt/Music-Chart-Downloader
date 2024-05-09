@@ -68,7 +68,7 @@ with open(ALL_DATA_FILE, 'w', newline='', encoding="utf-8") as all_csvfile:
                         CHART_ARTIST = row.select("a.chart-artist span")[0].text
 
                     if len(row.select("a.chart-name span")):
-                    # Specifically to deal with 14 Nv 1952 - first ever chart
+                    # Specifically to deal with 14 Nov 1952 - first ever chart - as there was no movement
                         if len(row.select("a.chart-name span"))==1:
                             CHART_TITLE = row.select("a.chart-name span")[0].text
                         else:
