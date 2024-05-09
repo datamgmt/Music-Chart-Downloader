@@ -6,10 +6,6 @@ Music Chart Downloader (mcd.py) by David M Walker
 
 A utility to download music charts from various sources and convert them
 to csv or json formatted files
-
-To Do List:
-    * Add US Billboard Charts (URL https://www.billboard.com/charts/hot-100/2024-04-13/)
-    * XML Support
 """
 
 import argparse
