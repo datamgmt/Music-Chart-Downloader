@@ -130,6 +130,7 @@ Potential enhancements for an indeterminate future update
 
 * Add US Billboard Charts (e.g. URL https://www.billboard.com/charts/hot-100/2024-04-13/)
 * XML Support
+* Multi-threading for faster processing
 
 ## Build environment & maintenance
 
@@ -141,3 +142,6 @@ Potential enhancements for an indeterminate future update
 * https://pypi.org/project/uk-charts-api
 * https://medium.com/@caineosborne/analysing-uk-chart-history-1956-to-2017-6fec0ecc991b
 * https://www.markhneedham.com/blog/2020/01/04/quick-graph-uk-official-charts/
+
+## Acknowldgements
+* @Prokopp for unwittingly being a sounding board 
