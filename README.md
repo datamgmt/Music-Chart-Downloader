@@ -130,7 +130,6 @@ Potential enhancements for an indeterminate future update
 
 * Add US Billboard Charts (e.g. URL https://www.billboard.com/charts/hot-100/2024-04-13/)
 * XML Support
-* Multi-threading for faster processing
 
 ## Build environment & maintenance
 

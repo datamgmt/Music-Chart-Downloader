@@ -9,6 +9,7 @@ to csv or json formatted files
 """
 
 import argparse
+import concurrent.futures
 import csv
 import datetime
 import json
@@ -85,6 +86,29 @@ def json_writer(filename, content):
 
     with open(filename, "w", newline="", encoding="utf-8") as jsonfile:
         jsonfile.write(json_object)
+
+
+def process_files_for_date(working_date):
+    """
+    Fetch URL and then parse subsequent file
+    """
+
+    date_string = working_date.strftime("%Y%m%d")
+    print(f"Processing: {args.chart}-{date_string}")
+
+    page = f"{args.chart_url_prefix}/{date_string}"
+    local_html = f"{args.datadir}/html/{args.chart}-{date_string}.html"
+    download_file(page, local_html)
+
+    with open(local_html, "r", encoding="utf-8") as file:
+        file_content=process_html_file(file, working_date, args.chart)
+        if "all" in args.output_set:
+            all_content.extend(file_content)
+        if "weekly" in args.output_set:
+            if "csv" in args.output_type:
+                csv_writer(f"{args.datadir}/csv/{args.chart}-{date_string}.csv", file_content)
+            if "json" in args.output_type:
+                json_writer(f"{args.datadir}/json/{args.chart}-{date_string}.json", file_content)
 
 
 def process_html_file(filehandle, chart_date, chart):
@@ -218,24 +242,15 @@ args = validate_args(parser.parse_args())
 fetchdate = args.startdate
 all_content = []
 
+pool = concurrent.futures.ThreadPoolExecutor()
+
 while fetchdate <= args.enddate:
-    date_string = fetchdate.strftime("%Y%m%d")
-    print(f"Processing: {args.chart}-{date_string}")
 
-    page = f"{args.chart_url_prefix}/{date_string}"
-    local_html = f"{args.datadir}/html/{args.chart}-{date_string}.html"
-    download_file(page, local_html)
-
-    with open(local_html, "r", encoding="utf-8") as file:
-        file_content=process_html_file(file, fetchdate, args.chart)
-        all_content.extend(file_content)
-        if "weekly" in args.output_set:
-            if "csv" in args.output_type:
-                csv_writer(f"{args.datadir}/csv/{args.chart}-{date_string}.csv", file_content)
-            if "json" in args.output_type:
-                json_writer(f"{args.datadir}/json/{args.chart}-{date_string}.json", file_content)
-
+    pool.submit(process_files_for_date(fetchdate))
     fetchdate = fetchdate + datetime.timedelta(7)
+
+pool.shutdown(wait=True)
+
 
 if "all" in args.output_set:
     if "csv" in args.output_type:
