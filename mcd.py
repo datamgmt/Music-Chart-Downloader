@@ -94,7 +94,7 @@ def process_files_for_date(working_date):
     """
 
     date_string = working_date.strftime("%Y%m%d")
-    print(f"Processing: {args.chart}-{date_string}")
+    print (f"Processing: {args.chart}-{date_string}")
 
     page = f"{args.chart_url_prefix}/{date_string}"
     local_html = f"{args.datadir}/html/{args.chart}-{date_string}.html"
@@ -178,7 +178,11 @@ def validate_args(arglist):
     arglist.enddate=date_validator(arglist.enddate, arglist.chart)
 
     if arglist.startdate > arglist.enddate:
-        sys.exit(f"Start Date ({arglist.startdate}) is after End Date ({arglist.enddate})")
+        print (f"Warning: Start Date ({arglist.startdate}) is after End Date ({arglist.enddate})")
+        print ("         Automatically transposing start and end dates")
+        tmp_date=arglist.startdate
+        arglist.startdate=arglist.enddate
+        arglist.enddate=tmp_date
 
     folder_list = ["html"]
     folder_list.extend(arglist.output_type)
