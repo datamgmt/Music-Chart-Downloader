@@ -25,5 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Dependencies
+        run: pip install beautifulsoup4 requests
+    steps:
       - name: Run PyLint 
         run: pylint *.py
