@@ -1,32 +1,25 @@
-name: pylint-examples
+name: Pylint
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - '*.py'
-  pull_request:
-    branches:
-      - main
-    paths:
-      - '*.py'
-  workflow_dispatch:
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
-  cancel-in-progress: true
-
-permissions: read-all
+on: [push]
 
 jobs:
-  pylint:
-    name: Lint mcd application
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    strategy:
+      matrix:
+        python-version: ["3.9"]
     steps:
-      - name: Dependencies
-        run: pip install beautifulsoup4 requests
-    steps:
-      - name: Run PyLint 
-        run: pylint *.py
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pylint
+        pip install beautifulsoup4
+        pip install requests
+    - name: Analysing the code with pylint
+      run: |
+        pylint $(git ls-files '*.py')
