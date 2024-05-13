@@ -263,4 +263,3 @@ if "all" in args.output_set:
         json_writer(f"{args.datadir}/json/{args.chart}-all.json", all_content)
 
 print ("Finished")
- 
