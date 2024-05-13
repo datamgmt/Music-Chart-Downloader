@@ -123,6 +123,16 @@ chart_date,chart_position,chart_artist,chart_title,chart_movement,chart_peak,cha
 ]
 ```
 
+## Performance & capacity
+
+* Downloading and processing one year of data takes around 2.5 minutes on good machine and fast network (see Build environment below)
+* If the files have already been downloaded the processing time is around 50 seconds for the same set of files
+* This is based on 100 entries per week and 52 entries
+* Historical charts had significantly fewer entries and so are faster
+* Processing a large data range to an 'all' file also consumes more memory
+* All of the 2023 singles charts create a file of around 250Kb
+* The earliest charts are in the 1950s so there are around ~4000 files to process all data for a single chart
+
 
 ## To Do List
 
