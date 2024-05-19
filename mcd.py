@@ -180,42 +180,6 @@ def process_officialcharts_entry(rowdata, entry_date):
     return entry
 
 
-def validate_args(arglist):
-    """
-    Validate all passed parameters
-    """
-
-    arglist.startdate = date_validator(arglist.startdate, arglist.chart)
-    arglist.enddate = date_validator(arglist.enddate, arglist.chart)
-
-    if arglist.startdate > arglist.enddate:
-        print(
-            f"Warning: Start Date ({arglist.startdate}) is after End Date ({arglist.enddate})")
-        print("         Automatically transposing start and end dates")
-        tmp_date = arglist.startdate
-        arglist.startdate = arglist.enddate
-        arglist.enddate = tmp_date
-
-    arglist.weeks=range(int(datetime.datetime.combine(arglist.startdate,
-                            datetime.datetime.min.time()).timestamp()),
-                        int(datetime.datetime.combine(arglist.enddate,
-                            datetime.datetime.min.time()).timestamp()),
-                        7*24*60*60)
-    folder_list = ["html"]
-    folder_list.extend(arglist.output_type)
-    for folder in folder_list:
-        if not os.path.exists(f"{arglist.datadir}/{folder}"):
-            try:
-                os.makedirs(f"{arglist.datadir}/{folder}")
-            except OSError:
-                sys.exit(
-                    f"Failed to make directory {arglist.datadir}/{folder}")
-
-    arglist.chart_url_prefix = chart_data[arglist.chart]["url"]
-
-    return arglist
-
-
 def setup_args():
     """
     Create arguement parser object
@@ -259,6 +223,43 @@ def setup_args():
         help="Weekly charts and/or one large file (Default: %(default)s)")
 
     return parser
+
+
+def validate_args(arglist):
+    """
+    Validate all passed parameters
+    """
+
+    arglist.startdate = date_validator(arglist.startdate, arglist.chart)
+    arglist.enddate = date_validator(arglist.enddate, arglist.chart)
+
+    if arglist.startdate > arglist.enddate:
+        print(
+            f"Warning: Start Date ({arglist.startdate}) is after End Date ({arglist.enddate})")
+        print("         Automatically transposing start and end dates")
+        tmp_date = arglist.startdate
+        arglist.startdate = arglist.enddate
+        arglist.enddate = tmp_date
+
+    arglist.weeks=range(int(datetime.datetime.combine(arglist.startdate,
+                            datetime.datetime.min.time()).timestamp()),
+                        int(datetime.datetime.combine(arglist.enddate,
+                            datetime.datetime.min.time()).timestamp()+7*24*60*60),
+                        7*24*60*60)
+    folder_list = ["html"]
+    folder_list.extend(arglist.output_type)
+    for folder in folder_list:
+        if not os.path.exists(f"{arglist.datadir}/{folder}"):
+            try:
+                os.makedirs(f"{arglist.datadir}/{folder}")
+            except OSError:
+                sys.exit(
+                    f"Failed to make directory {arglist.datadir}/{folder}")
+
+    arglist.chart_url_prefix = chart_data[arglist.chart]["url"]
+
+    return arglist
+
 
 if __name__ == '__main__':
 
