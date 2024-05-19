@@ -94,31 +94,31 @@ def json_writer(filename, content):
         jsonfile.write(json_object)
 
 
-def process_files_for_date(working_date):
+def process_files_for_date(argset, working_date):
     """
     Fetch URL and then parse subsequent file
     """
 
-    date_string = working_date.strftime("%Y%m%d")
-    print(f"Processing: {args.chart}-{date_string}")
+    newdate = datetime.datetime.fromtimestamp(working_date)
+    date_string = newdate.strftime('%Y-%m-%d')
+    print(date_string)
 
-    page = f"{args.chart_url_prefix}/{date_string}"
-    local_html = f"{args.datadir}/html/{args.chart}-{date_string}.html"
+    page = f"{argset.chart_url_prefix}/{date_string}"
+    local_html = f"{argset.datadir}/html/{argset.chart}-{date_string}.html"
     download_file(page, local_html)
 
     with open(local_html, "r", encoding="utf-8") as file:
-        file_content = process_html_file(file, working_date, args.chart)
-        if "all" in args.output_set:
-            all_content.extend(file_content)
-        if "weekly" in args.output_set:
-            if "csv" in args.output_type:
+        file_content = process_html_file(file, working_date, argset.chart)
+        if 'weekly' in argset.output_set:
+            if "csv" in argset.output_type:
                 csv_writer(
-                    f"{args.datadir}/csv/{args.chart}-{date_string}.csv",
+                    f"{argset.datadir}/csv/{argset.chart}-{date_string}.csv",
                     file_content)
-            if "json" in args.output_type:
+            if "json" in argset.output_type:
                 json_writer(
-                    f"{args.datadir}/json/{args.chart}-{date_string}.json",
+                    f"{argset.datadir}/json/{argset.chart}-{date_string}.json",
                     file_content)
+    return file_content
 
 
 def process_html_file(filehandle, chart_date, chart):
@@ -132,7 +132,6 @@ def process_html_file(filehandle, chart_date, chart):
     chart_entries = []
 
     if chart in ("uk-singles", "uk-albums"):
-
         rows = list(soup.select("div.chart-item"))
 
         for row in rows:
@@ -148,8 +147,10 @@ def process_officialcharts_entry(rowdata, entry_date):
     Parse each entry for a UK Singles Chart format file
     """
 
-    entry = {"chart_date": datetime.datetime.strftime(entry_date, "%Y%m%d"),
-             "chart_movement": "New"}
+    newdate = datetime.datetime.fromtimestamp(entry_date)
+    date_string = newdate.strftime('%Y%m%d')
+
+    entry = {"chart_date": date_string, "chart_movement": "New"}
 
     if len(rowdata.select("div.chart-item-content div.position strong")):
         entry["chart_position"] = rowdata.select("div.position strong")[0].text
@@ -195,6 +196,11 @@ def validate_args(arglist):
         arglist.startdate = arglist.enddate
         arglist.enddate = tmp_date
 
+    arglist.weeks=range(int(datetime.datetime.combine(arglist.startdate,
+                            datetime.datetime.min.time()).timestamp()),
+                        int(datetime.datetime.combine(arglist.enddate,
+                            datetime.datetime.min.time()).timestamp()),
+                        7*24*60*60)
     folder_list = ["html"]
     folder_list.extend(arglist.output_type)
     for folder in folder_list:
@@ -210,77 +216,83 @@ def validate_args(arglist):
     return arglist
 
 
-# Parameter and option configuration
+def setup_args():
+    """
+    Create arguement parser object
+    """
 
-parser = argparse.ArgumentParser(
-    description="The Music Chart Data Collector",
-    epilog="(c)2024 Data Management & Warehousing ")
-parser.add_argument(
-    "--chart",
-    choices=[
-        "uk-singles",
-        "uk-albums"],
-    default="uk-singles",
-    help="Which music chart to download, (Default: %(default)s)")
-parser.add_argument(
-    "--startdate",
-    default="19521114",
-    help="The first chart to download in YYYYMMDD format (Default: %(default)s)")
-parser.add_argument(
-    "--enddate",
-    default=datetime.date.today().strftime("%Y%m%d"),
-    help="The last chart to download in YYYYMMDD format (Default: %(default)s)")
-parser.add_argument(
-    "--datadir",
-    default="./data",
-    help="Location of datafiles used in processing (Default: %(default)s)")
-parser.add_argument("--output_type",
-                    nargs="*",
-                    choices=["csv", "json"],
-                    default=["csv"],
-                    help="Output file formats required (Default: %(default)s)")
-parser.add_argument(
-    "--output_set",
-    nargs="*",
-    choices=[
-        "weekly",
-        "all"],
-    default=["all"],
-    help="Weekly charts and/or one large file (Default: %(default)s)")
+    parser = argparse.ArgumentParser(
+        description="The Music Chart Data Collector",
+        epilog="(c)2024 Data Management & Warehousing ")
+    parser.add_argument(
+        "--chart",
+        choices=[
+            "uk-singles",
+            "uk-albums"],
+        default="uk-singles",
+        help="Which music chart to download, (Default: %(default)s)")
+    parser.add_argument(
+        "--startdate",
+        default="19521114",
+        help="The first chart to download in YYYYMMDD format (Default: %(default)s)")
+    parser.add_argument(
+        "--enddate",
+        default=datetime.date.today().strftime("%Y%m%d"),
+        help="The last chart to download in YYYYMMDD format (Default: %(default)s)")
+    parser.add_argument(
+        "--datadir",
+        default="./data",
+        help="Location of datafiles used in processing (Default: %(default)s)")
+    parser.add_argument(
+        "--output_type",
+        nargs="*",
+        choices=["csv", "json"],
+        default=["csv"],
+        help="Output file formats required (Default: %(default)s)")
+    parser.add_argument(
+        "--output_set",
+        nargs="*",
+        choices=[
+            "weekly",
+            "all"],
+        default=["all"],
+        help="Weekly charts and/or one large file (Default: %(default)s)")
 
-# url: URL of the historical charts
-# day: Day of week chart released (0=Monday ... 6=Sunday)
-# first: Dates of the very first chart for each organisation
-chart_data = {"uk-singles": {"url": "https://www.officialcharts.com/charts/singles-chart/",
-                             "day": 4,
-                             "first": datetime.date(1952, 11, 14)},
-              "uk-albums": {"url": "https://www.officialcharts.com/charts/albums-chart/",
-                            "day": 4,
-                            "first": datetime.date(1956, 7, 28)},
-              "billboard-top-100": {"url": "undefined",
-                                    "day": 6,
-                                    "first": datetime.date(1958, 8, 4)}
-              }
+    return parser
 
-args = validate_args(parser.parse_args())
+if __name__ == '__main__':
 
-fetchdate = args.startdate
-all_content = []
+    # url: URL of the historical charts
+    # day: Day of week chart released (0=Monday ... 6=Sunday)
+    # first: Dates of the very first chart for each organisation
+    chart_data = {"uk-singles": {"url": "https://www.officialcharts.com/charts/singles-chart/",
+                                 "day": 4,
+                                 "first": datetime.date(1952, 11, 14)},
+                  "uk-albums": {"url": "https://www.officialcharts.com/charts/albums-chart/",
+                                "day": 4,
+                                "first": datetime.date(1956, 7, 28)},
+                  "billboard-top-100": {"url": "undefined",
+                                "day": 6,
+                                "first": datetime.date(1958, 8, 4)}
+                 }
 
-pool = concurrent.futures.ThreadPoolExecutor()
+    args = validate_args(setup_args().parse_args())
 
-while fetchdate <= args.enddate:
+    fetchdate = args.startdate
+    all_content = []
 
-    pool.submit(process_files_for_date(fetchdate))
-    fetchdate = fetchdate + datetime.timedelta(7)
+    with concurrent.futures.ProcessPoolExecutor() as pool:
 
-pool.shutdown(wait=True)
+        futures = [pool.submit(process_files_for_date, args, weekno) for weekno in args.weeks]
 
+        for future in concurrent.futures.as_completed(futures):
+            if "all" in args.output_set:
+                all_content.extend(future.result())
 
-if "all" in args.output_set:
-    if "csv" in args.output_type:
-        csv_writer(f"{args.datadir}/csv/{args.chart}-all.csv", all_content)
-    if "json" in args.output_type:
-        json_writer(f"{args.datadir}/json/{args.chart}-all.json", all_content)
+    if "all" in args.output_set:
+        if "csv" in args.output_type:
+            csv_writer(f"{args.datadir}/csv/{args.chart}-all.csv", all_content)
+        if "json" in args.output_type:
+            json_writer(f"{args.datadir}/json/{args.chart}-all.json", all_content)
 
-print("Finished")
+    print("Finished")

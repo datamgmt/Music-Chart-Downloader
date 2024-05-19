@@ -125,8 +125,8 @@ chart_date,chart_position,chart_artist,chart_title,chart_movement,chart_peak,cha
 
 ## Performance & capacity
 
-* Downloading and processing one year of data takes around 2.5 minutes on good machine and fast network (see Build environment below)
-* If the files have already been downloaded the processing time is around 50 seconds for the same set of files
+* Downloading and processing one year of data takes around 20 seconds on good machine and fast network (see Build environment below)
+* If the files have already been downloaded the processing time is around 3 seconds for the same set of files
 * This is based on 100 entries per week and 52 entries
 * Historical charts had significantly fewer entries and so are faster
 * Processing a large data range to an 'all' file also consumes more memory
