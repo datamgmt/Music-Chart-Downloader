@@ -88,7 +88,7 @@ def json_writer(filename, content):
     """
 
     # Serializing json
-    json_object = json.dumps(content, indent=4) + "\n:"
+    json_object = json.dumps(content, indent=4) + "\n"
 
     with open(filename, "w", newline="", encoding="utf-8") as jsonfile:
         jsonfile.write(json_object)
@@ -99,8 +99,7 @@ def process_files_for_date(argset, working_date):
     Fetch URL and then parse subsequent file
     """
 
-    newdate = datetime.datetime.fromtimestamp(working_date)
-    date_string = newdate.strftime('%Y-%m-%d')
+    date_string = working_date
     print(date_string)
 
     page = f"{argset.chart_url_prefix}/{date_string}"
@@ -147,10 +146,7 @@ def process_officialcharts_entry(rowdata, entry_date):
     Parse each entry for a UK Singles Chart format file
     """
 
-    newdate = datetime.datetime.fromtimestamp(entry_date)
-    date_string = newdate.strftime('%Y%m%d')
-
-    entry = {"chart_date": date_string, "chart_movement": "New"}
+    entry = {"chart_date": entry_date.replace('-', ''), "chart_movement": "New"}
 
     if len(rowdata.select("div.chart-item-content div.position strong")):
         entry["chart_position"] = rowdata.select("div.position strong")[0].text
@@ -182,7 +178,7 @@ def process_officialcharts_entry(rowdata, entry_date):
 
 def setup_args():
     """
-    Create arguement parser object
+    Create argument parser object
     """
 
     parser = argparse.ArgumentParser(
@@ -241,11 +237,17 @@ def validate_args(arglist):
         arglist.startdate = arglist.enddate
         arglist.enddate = tmp_date
 
-    arglist.weeks=range(int(datetime.datetime.combine(arglist.startdate,
-                            datetime.datetime.min.time()).timestamp()),
-                        int(datetime.datetime.combine(arglist.enddate,
-                            datetime.datetime.min.time()).timestamp()+7*24*60*60),
-                        7*24*60*60)
+    start_datetime = datetime.datetime.combine(arglist.startdate, datetime.datetime.min.time())
+    end_datetime = datetime.datetime.combine(arglist.enddate, datetime.datetime.min.time())
+
+    delta = datetime.timedelta(days=7)
+    current_date = start_datetime
+
+    arglist.weeks = []
+    while current_date <= end_datetime:
+        arglist.weeks.append(current_date.strftime('%Y-%m-%d'))
+        current_date += delta
+
     folder_list = ["html"]
     folder_list.extend(arglist.output_type)
     for folder in folder_list:
