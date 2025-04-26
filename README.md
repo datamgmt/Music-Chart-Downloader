@@ -39,10 +39,10 @@ Download the 2023 UK Album charts and write one JSON file per week
 Help and options
 
 ```
-usage: mcdc.py [-h] [--chart {uk-singles,uk-albums}] [--startdate STARTDATE] [--enddate ENDDATE] [--datadir DATADIR]
+usage: mcd.py [-h] [--chart {uk-singles,uk-albums}] [--startdate STARTDATE] [--enddate ENDDATE] [--datadir DATADIR]
                [--output_type [{csv,json} ...]] [--output_set [{weekly,all} ...]]
 
-The Music Chart Data Collector
+The Music Chart Downloader
 
 optional arguments:
   -h, --help            show this help message and exit
