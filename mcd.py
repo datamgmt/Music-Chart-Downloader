@@ -156,6 +156,8 @@ def process_officialcharts_entry(rowdata, entry_date):
 
     if len(rowdata.select("a.chart-artist span")):
         entry["chart_artist"] = rowdata.select("a.chart-artist span")[0].text
+    else:
+        entry["chart_artist"] = rowdata.select("span.chart-artist span")[0].text
 
     if len(rowdata.select("a.chart-name span")):
         # Specifically deal the first chart where there is no movement
