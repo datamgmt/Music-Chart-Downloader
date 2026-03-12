@@ -7,3 +7,4 @@ data/html/*.html
 data/json/.DS_Store
 data/json/*.json
 samples/.DS_Store
+.Rhistory
