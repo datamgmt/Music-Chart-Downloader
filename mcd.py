@@ -107,7 +107,7 @@ def process_files_for_date(argset, working_date):
     download_file(page, local_html)
 
     with open(local_html, "r", encoding="utf-8") as file:
-        file_content = process_html_file(file, working_date, argset.chart)
+        file_content = process_html_file(file, working_date, argset.chart, argset.dateformat)
         if 'weekly' in argset.output_set:
             if "csv" in argset.output_type:
                 csv_writer(
@@ -120,7 +120,7 @@ def process_files_for_date(argset, working_date):
     return file_content
 
 
-def process_html_file(filehandle, chart_date, chart):
+def process_html_file(filehandle, chart_date, chart, dateformat):
     """
     Parse the header information of the HTML file and
     then call the function to parse each chart entry
@@ -134,19 +134,25 @@ def process_html_file(filehandle, chart_date, chart):
         rows = list(soup.select("div.chart-item"))
 
         for row in rows:
-            entry = process_officialcharts_entry(row, chart_date)
+            entry = process_officialcharts_entry(row, chart_date, dateformat)
             if entry["chart_position"]:
                 chart_entries.append(entry)
 
     return chart_entries
 
 
-def process_officialcharts_entry(rowdata, entry_date):
+def format_chart_date(date_string, date_format):
+    dt = datetime.datetime.strptime(date_string, "%Y-%m-%d")
+    pyfmt=date_format.replace("yyyy","%Y").replace("mm","%m").replace("dd","%d")
+    return dt.strftime(pyfmt)
+
+
+def process_officialcharts_entry(rowdata, entry_date, date_format):
     """
     Parse each entry for a UK Singles Chart format file
     """
 
-    entry = {"chart_date": entry_date.replace('-', ''), "chart_movement": "New"}
+    entry = {"chart_date": format_chart_date(entry_date, date_format), "chart_movement": "New"}
 
     if len(rowdata.select("div.chart-item-content div.position strong")):
         entry["chart_position"] = rowdata.select("div.position strong")[0].text
@@ -219,6 +225,7 @@ def setup_args():
             "all"],
         default=["all"],
         help="Weekly charts and/or one large file (Default: %(default)s)")
+    parser.add_argument("--dateformat", default="yyyymmdd", help="Output format for chart_date (e.g. yyyymmdd, yyyy-mm-dd, dd-mm-yyyy)")
 
     return parser
 

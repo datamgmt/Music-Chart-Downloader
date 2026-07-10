@@ -30,10 +30,10 @@ Download all UK Singles charts and create a single CSV file with all the data
 ./mcd.py
 ```
 
-Download the 2023 UK Album charts and write one JSON file per week
+Download the 2026 UK Album charts and write one JSON file per week and change the date format to dd-mm-yyyy
 
 ```
-./mcd.py --chart uk-albums --startdate 20230101 --enddate 20231231 --output_type json --output_set weekly
+./mcd.py --chart uk-albums --startdate 20260101 --enddate 20261231 --output_type json --output_set weekly --dateformat dd-mm-yyyy
 ```
 
 Help and options
@@ -42,7 +42,7 @@ Help and options
 usage: mcd.py [-h] [--chart {uk-singles,uk-albums}] [--startdate STARTDATE] [--enddate ENDDATE] [--datadir DATADIR]
                [--output_type [{csv,json} ...]] [--output_set [{weekly,all} ...]]
 
-The Music Chart Downloader
+The Music Chart Data Collector
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -50,12 +50,14 @@ optional arguments:
                         Which music chart to download, (Default: uk-singles)
   --startdate STARTDATE
                         The first chart to download in YYYYMMDD format (Default: 19521114)
-  --enddate ENDDATE     The last chart to download in YYYYMMDD format (Default: 20240509)
+  --enddate ENDDATE     The last chart to download in YYYYMMDD format (Default: 20260710)
   --datadir DATADIR     Location of datafiles used in processing (Default: ./data)
   --output_type [{csv,json} ...]
                         Output file formats required (Default: ['csv'])
   --output_set [{weekly,all} ...]
                         Weekly charts and/or one large file (Default: ['all'])
+  --dateformat DATEFORMAT
+                        Output format for chart_date (e.g. yyyymmdd, yyyy-mm-dd, dd-mm-yyyy)
 
 (c)2024 Data Management & Warehousing
 ```
@@ -69,7 +71,7 @@ optional arguments:
 │   ├── csv                     # CSV Output files
 │   ├── html                    # Downloaded HTML Files
 │   └── json                    # JSON Output files
-├── mcdc.py                     # The script
+├── mcd.py                     # The script
 └── samples                     # sample html files to understand the structure 
     ├── uk-singles-chart.html
     └── uk-singles-chart.png
